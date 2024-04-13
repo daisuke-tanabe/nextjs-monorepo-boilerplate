@@ -1,0 +1,21 @@
+{
+  "name": "@packages/database",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/client.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch ./src/client.ts",
+    "format": "prisma format",
+    "generate": "prisma generate",
+    "studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "5.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "prisma": "5.12.1"
+  }
+}
