@@ -16,6 +16,7 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    ignores: ['node_modules', '.next', 'out', 'build'],
   },
   {
     files: ['apps/web/**/*.[jt]s', 'apps/web/**/*.[cm]js', 'apps/web/**/*.[cm]ts', 'apps/web/**/*.[jt]sx'],
