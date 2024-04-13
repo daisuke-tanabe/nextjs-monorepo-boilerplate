@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
+import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from 'typescript-eslint';
 
 const compat = new FlatCompat();
@@ -38,4 +39,5 @@ export default tseslint.config(
     files: ['**/*.js', '**/*.[cm]js', '**/*.jsx'],
     extends: [tseslint.configs.disableTypeChecked],
   },
+  eslintConfigPrettier
 );
