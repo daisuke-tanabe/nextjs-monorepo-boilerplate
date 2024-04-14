@@ -12,7 +12,7 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        project: ['./apps/web/tsconfig.json'],
+        project: ['./apps/web/tsconfig.json', './packages/database/tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
