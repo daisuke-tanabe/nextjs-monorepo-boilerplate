@@ -11,6 +11,7 @@
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,json}\" --ignore-path .gitignore",
     "lint": "eslint .",
+    "lint:secret": "secretlint \"**/*\"",
     "test": "turbo run test"
   },
   "devDependencies": {
