@@ -8,7 +8,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,json}\" --ignore-path .gitignore",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@eslint/js": "9.0.0",
