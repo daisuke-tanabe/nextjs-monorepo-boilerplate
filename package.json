@@ -9,7 +9,7 @@
     "db:generate": "turbo run db:generate",
     "db:push": "turbo run db:push",
     "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,json}\" --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,json}\"",
     "lint": "eslint .",
     "lint:secret": "secretlint \"**/*\"",
     "test": "turbo run test"
