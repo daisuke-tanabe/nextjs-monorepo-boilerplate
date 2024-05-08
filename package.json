@@ -15,11 +15,13 @@
   },
   "devDependencies": {
     "@eslint/js": "9.0.0",
+    "@secretlint/secretlint-rule-preset-recommend": "8.2.4",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.1",
     "eslint-config-prettier": "9.1.0",
     "lefthook": "1.6.10",
     "prettier": "3.2.5",
+    "secretlint": "8.2.4",
     "turbo": "^1.13.2",
     "typescript": "5.4.5",
     "typescript-eslint": "7.6.0"
