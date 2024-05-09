@@ -8,18 +8,20 @@ const compat = new FlatCompat();
 export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
+
   {
     languageOptions: {
       parserOptions: {
-        project: ['./apps/web/tsconfig.json', './packages/database/tsconfig.json'],
+        project: ['apps/web/tsconfig.json', 'packages/database/tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
-    ignores: ['node_modules', '.next', 'out', 'build'],
   },
+
   {
-    files: ['apps/web/**/*.[jt]s', 'apps/web/**/*.[cm]js', 'apps/web/**/*.[cm]ts', 'apps/web/**/*.[jt]sx'],
+    files: ['apps/web/**/*.{ts,tsx}'],
     extends: compat.extends('next/core-web-vitals'),
     settings: {
       // Locating the Next.js application
@@ -28,10 +30,13 @@ export default tseslint.config(
         rootDir: 'apps/web',
       },
     },
+    ignores: ['node_modules', '.next', 'out', 'build'],
   },
+
   {
-    files: ['**/*.js', '**/*.[cm]js', '**/*.jsx'],
-    extends: [tseslint.configs.disableTypeChecked],
+    files: ['**/*.{js,mjs}'],
+    ...tseslint.configs.disableTypeChecked,
   },
+
   eslintConfigPrettier,
 );
