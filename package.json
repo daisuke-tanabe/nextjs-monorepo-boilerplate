@@ -15,6 +15,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "3.0.2",
     "@eslint/js": "9.2.0",
     "@secretlint/secretlint-rule-preset-recommend": "8.2.4",
     "eslint": "8.57.0",
