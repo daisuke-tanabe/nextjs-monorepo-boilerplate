@@ -60,6 +60,9 @@ importers:
       '@packages/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@packages/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@types/node':
         specifier: 20.12.11
         version: 20.12.11
@@ -76,12 +79,17 @@ importers:
         specifier: 5.13.0
         version: 5.13.0(prisma@5.13.0)
     devDependencies:
+      '@packages/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@types/node':
         specifier: 20.12.11
         version: 20.12.11
       prisma:
         specifier: 5.13.0
         version: 5.13.0
+
+  packages/typescript-config: {}
 
 packages:
 
