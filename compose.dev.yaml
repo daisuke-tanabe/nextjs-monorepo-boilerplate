@@ -1,0 +1,19 @@
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+      target: dev-runner
+    develop:
+      watch:
+        - action: sync
+          path: ./apps/web
+          target: /app/apps/web
+        - action: rebuild
+          path: ./apps/web/package.json
+    command: ["pnpm", "dev"]
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000

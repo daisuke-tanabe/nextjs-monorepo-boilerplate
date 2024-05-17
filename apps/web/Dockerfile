@@ -3,6 +3,7 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
+
 FROM base AS builder
 WORKDIR /app
 COPY . .
@@ -20,7 +21,13 @@ COPY --from=builder /app/out/full/ .
 RUN pnpm turbo run build --filter=web...
 
 
-FROM base AS runner
+FROM base AS dev-runner
+WORKDIR /app
+COPY . .
+RUN pnpm install
+
+
+FROM base AS prod-runner
 WORKDIR /app
 ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs

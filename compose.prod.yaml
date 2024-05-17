@@ -1,10 +1,11 @@
 services:
   web:
+    container_name: web
     build:
       context: .
       dockerfile: ./apps/web/Dockerfile
-      target: runner
+      target: prod-runner
     environment:
-      - NODE_ENV=production
+      NODE_ENV: production
     ports:
-      - "3000:3000"
+      - 3000:3000
