@@ -1,6 +1,5 @@
 services:
   web:
-    container_name: web
     build:
       context: .
       dockerfile: ./apps/web/Dockerfile
@@ -17,3 +16,19 @@ services:
       NODE_ENV: development
     ports:
       - 3000:3000
+      - 5555:5555
+
+  database:
+    image: postgres:16.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydb
+      TZ: UTC
+    ports:
+      - 5432:5432
+    volumes:
+      - db-store:/var/lib/postgresql/data
+
+volumes:
+  db-store:

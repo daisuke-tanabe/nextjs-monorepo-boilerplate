@@ -1,10 +1,14 @@
 import Image from 'next/image';
+import { prisma } from '@packages/database';
 import styles from './page.module.css';
 
-export default function Home() {
+export default async function Home() {
+  const result = await prisma.user.count();
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <div>user: {result}</div>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
