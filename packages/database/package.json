@@ -6,10 +6,10 @@
     ".": "./src/client.ts"
   },
   "scripts": {
-    "dev": "prisma db push --skip-generate && prisma studio",
+    "dev": "prisma studio",
     "db:format": "prisma format",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push --skip-generate"
+    "db:push": "prisma db push --skip-generate",
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "5.14.0"
