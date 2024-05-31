@@ -8,7 +8,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,json}\"",
-    "lint": "eslint .",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint .",
     "lint:secret": "secretlint \"**/*\"",
     "migrate": "turbo run migrate",
     "test": "turbo run test"
