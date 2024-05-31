@@ -9,7 +9,8 @@
     "dev": "prisma studio",
     "db:format": "prisma format",
     "db:push": "prisma db push --skip-generate",
-    "generate": "prisma generate"
+    "generate": "prisma generate",
+    "migrate": "prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "5.14.0"

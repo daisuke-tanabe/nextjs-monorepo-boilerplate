@@ -12,6 +12,7 @@
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,cjs,mjs,cts,mts,json}\"",
     "lint": "eslint .",
     "lint:secret": "secretlint \"**/*\"",
+    "migrate": "turbo run migrate",
     "test": "turbo run test"
   },
   "devDependencies": {

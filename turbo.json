@@ -16,6 +16,9 @@
     "generate": {
       "cache": false
     },
+    "migrate": {
+      "cache": false
+    },
     "test": {}
   }
 }

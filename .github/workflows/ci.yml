@@ -7,6 +7,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      POSTGRES_PRISMA_URL: postgresql://postgres:postgres@127.0.0.1:5432/mydb
+      POSTGRES_URL_NON_POOLING: postgresql://postgres:postgres@127.0.0.1:5432/mydb
+
+    services:
+      database:
+        image: postgres:16.2
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: mydb
+          TZ: UTC
+        ports:
+          - 5432:5432
 
     steps:
       - uses: actions/checkout@v4
@@ -35,5 +49,10 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: pnpm i --frozen-lockfile
-      - run: pnpm build
+      - run: |
+          touch ./packages/database/.env
+          echo "POSTGRES_PRISMA_URL=${POSTGRES_PRISMA_URL}" >> ./packages/database/.env
+          echo "POSTGRES_URL_NON_POOLING=${POSTGRES_URL_NON_POOLING}" >> ./packages/database/.env
+          pnpm migrate
+          pnpm build
       - run: pnpm test
