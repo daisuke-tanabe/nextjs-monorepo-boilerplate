@@ -8,8 +8,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      POSTGRES_PRISMA_URL: postgresql://postgres:postgres@127.0.0.1:5432/mydb
-      POSTGRES_URL_NON_POOLING: postgresql://postgres:postgres@127.0.0.1:5432/mydb
+      POSTGRES_PRISMA_URL: postgresql://postgres:postgres@localhost:5432/mydb
+      POSTGRES_URL_NON_POOLING: postgresql://postgres:postgres@localhost:5432/mydb
 
     services:
       database:
@@ -17,6 +17,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+          POSTGRES_HOST: localhost
           POSTGRES_DB: mydb
           TZ: UTC
         ports:
