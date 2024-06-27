@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "next": "15.0.0-rc.0",
-    "react": "19.0.0-rc-8971381549-20240625",
-    "react-dom": "19.0.0-rc-8971381549-20240625"
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614"
   },
   "devDependencies": {
     "@packages/database": "workspace:*",
