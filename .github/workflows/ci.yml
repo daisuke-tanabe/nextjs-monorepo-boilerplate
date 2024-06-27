@@ -49,11 +49,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - run: pnpm i --frozen-lockfile
+      - run: pnpm i
       - run: |
           touch ./packages/database/.env
           echo "POSTGRES_PRISMA_URL=${POSTGRES_PRISMA_URL}" >> ./packages/database/.env
           echo "POSTGRES_URL_NON_POOLING=${POSTGRES_URL_NON_POOLING}" >> ./packages/database/.env
-          pnpm migrate
           pnpm build
       - run: pnpm test
