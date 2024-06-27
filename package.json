@@ -33,7 +33,7 @@
     "secretlint": "8.2.4",
     "ts-jest": "29.1.5",
     "turbo": "1.13.4",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "typescript-eslint": "7.9.0"
   }
 }
