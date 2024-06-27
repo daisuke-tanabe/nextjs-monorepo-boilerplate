@@ -5,5 +5,5 @@
 ```
 $ corepack enable
 $ asdf reshim nodejs
-$ pnpm install --frozen-lockfile
+$ pnpm install
 ```
