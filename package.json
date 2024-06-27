@@ -19,7 +19,7 @@
     "@eslint/js": "9.2.0",
     "@secretlint/secretlint-rule-preset-recommend": "8.2.4",
     "@testing-library/jest-dom": "6.4.6",
-    "@testing-library/react": "15.0.7",
+    "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.3",
