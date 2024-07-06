@@ -2,7 +2,7 @@
 .turbo
 
 # local env files
-.env
+packages/database/.env
 .env*.local
 
 # dependencies
