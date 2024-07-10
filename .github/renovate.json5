@@ -1,8 +1,5 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ],
-  "timezone": "Asia/Tokyo",
-  "schedule": ["after 10am on monday", "before 12am on monday"]
+    "github>daisuke-tanabe/renovate-config"
+  ]
 }
