@@ -11,10 +11,10 @@
     "migrate": "prisma migrate dev"
   },
   "dependencies": {
-    "@prisma/client": "5.16.1"
+    "@prisma/client": "5.16.2"
   },
   "devDependencies": {
     "@packages/typescript-config": "workspace:*",
-    "prisma": "5.16.1"
+    "prisma": "5.16.2"
   }
 }
