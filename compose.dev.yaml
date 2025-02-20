@@ -20,7 +20,7 @@ services:
       - 5555:5555
 
   database:
-    image: postgres:17.0
+    image: postgres:17.3
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
