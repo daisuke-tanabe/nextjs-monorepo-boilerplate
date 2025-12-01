@@ -1,6 +1,6 @@
 {
   "name": "nextjs-monorepo-boilerplate",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.24.0",
   "engines": {
     "node": "22.19.0"
   },
